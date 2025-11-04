@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="site">
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand"><a href="/">{{ site.title }}</a></h1>
+      <p class="tagline">{{ site.tagline }}</p>
+      {% include "nav.njk" %}
+    </div>
+  </header>
+
+  <main class="site-main wrap">
+    {{ content | safe }}
+
+    <p class="meta small" style="margin-top:2rem; color:#666;">
+      {% if page and page.inputPath %}
+        Last updated: {% lastUpdated page.inputPath %}{% if site.repo %} · Commit {% lastCommit page.inputPath, site %}{% endif %}
+      {% endif %}
+    </p>
+  </main>
+
+  {% include "footer.njk" %}
+</body>
+</html>

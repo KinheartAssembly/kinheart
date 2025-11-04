@@ -1,0 +1,14 @@
+{
+  "name": "kinheartassembly-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "node scripts/generate-changelog.mjs",
+    "build": "eleventy",
+    "serve": "eleventy --serve --port=8080"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

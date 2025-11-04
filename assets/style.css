@@ -1,0 +1,24 @@
+/* Minimal, no toolchain required */
+:root { --ink:#111; --bg:#f9f9fb; --accent:#2e5cff; --soft:#e8e8ef; }
+* { box-sizing:border-box; }
+body.site { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header { background:#111; color:#fff; padding:1.25rem 0; }
+.site-header .brand a { color:#fff; text-decoration:none; }
+.tagline { opacity:.8; margin:.25rem 0 0 0; }
+.nav { margin-top:.5rem; display:flex; gap:1rem; flex-wrap:wrap; }
+.nav a { color:#fff; opacity:.9; }
+.nav a:hover { opacity:1; text-decoration:underline; }
+
+.site-main { padding:2rem 0; background:var(--bg); }
+.site-footer { background:var(--soft); margin-top:2rem; padding:1rem 0; font-size:.95rem; }
+
+.form { display:grid; gap:1rem; max-width: 640px; }
+.form label { display:grid; gap:.4rem; }
+input, textarea { border:1px solid #cfd3dc; padding:.6rem .7rem; border-radius:.5rem; background:white; }
+button { border:0; background:var(--accent); color:#fff; padding:.6rem 1rem; border-radius:.5rem; cursor:pointer; }
+button:hover { filter:brightness(1.05); }
+.small.note { color:#555; font-size:.9rem; margin-top:.5rem; }
